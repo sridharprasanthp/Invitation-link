@@ -59,7 +59,7 @@ function orient(e){if(e.gamma==null)return;$('tilt').style.setProperty('--ry',Ma
 $('start').onclick=async()=>{$('start').classList.add('hide');music();try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission){if(await DeviceOrientationEvent.requestPermission()==='granted')addEventListener('deviceorientation',orient)}else addEventListener('deviceorientation',orient)}catch(e){}go(0)};
 const eventStart=new Date('2026-12-13T07:30:00+05:30');
 const eventEnd=new Date('2026-12-13T09:00:00+05:30');
-const calendarUrl='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('Naming Ceremony')+'&dates=20261213T020000Z%2F20261213T033000Z&details='+encodeURIComponent('Join us for a joyful naming ceremony. Hosted by Sridhar Prasanth & Sathya.')+'&location='+encodeURIComponent('At the Baby’s Mother’s Home')+'&ctz=Asia%2FKolkata';
+const calendarUrl='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent("Naming Ceremony for Sathya Sridhar's baby")+'&dates=20261213T020000Z%2F20261213T033000Z&details='+encodeURIComponent('Join us for a joyful naming ceremony. Hosted by Sridhar Prasanth & Sathya.')+'&location='+encodeURIComponent('At the Baby’s Mother’s Home')+'&ctz=Asia%2FKolkata';
 $('calendarBtn').href=calendarUrl;
 function tick(){
  const now=Date.now(),start=eventStart.getTime(),end=eventEnd.getTime();
