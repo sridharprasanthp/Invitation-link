@@ -22,11 +22,11 @@ body:before{content:"";position:fixed;inset:9px;border:1px solid #b99765;pointer
 .book{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(-7deg) rotateX(1deg);transition:transform 1.2s cubic-bezier(.2,.75,.2,1)}
 .book.open{transform:rotateY(0) rotateX(0)}
 .pages{position:absolute;inset:7px 4px 7px 12px;border-radius:5px 16px 16px 5px;background:repeating-linear-gradient(90deg,#e5d6bd 0 2px,#fffaf0 2px 5px);box-shadow:8px 7px 0 #c6aa7e,12px 12px 20px #553d3020}
-.inside{position:absolute;inset:0;border-radius:5px 16px 16px 5px;overflow:hidden;background:linear-gradient(135deg,#fffdf7,#f5e8d6);border:1px solid #c7a66e;box-shadow:inset 0 0 0 9px #fffaf0,inset 0 0 0 10px #d6bd91;transform:translateZ(-2px)}
+.inside{position:absolute;inset:0;border-radius:5px 16px 16px 5px;overflow:hidden;background:linear-gradient(135deg,#fffdf7,#f5e8d6);border:1px solid #c7a66e;box-shadow:inset 0 0 0 9px #fffaf0,inset 0 0 0 10px #d6bd91;z-index:2;transform:translateZ(0)}
 .inside:before{content:"";position:absolute;inset:22px;border:1px solid #ddc69e;pointer-events:none}
 .inside-scroll{position:absolute;inset:31px 34px;overflow:auto;text-align:center;padding:12px 9px 22px;scrollbar-width:thin;scrollbar-color:#c7a66e transparent}
-.cover{position:absolute;inset:0;border-radius:5px 16px 16px 5px;transform-origin:left center;transform:rotateY(0);backface-visibility:hidden;z-index:5;transition:transform 1.35s cubic-bezier(.2,.75,.2,1);background:linear-gradient(135deg,#78394b,#4a1e30 70%,#351625);border:1px solid #d3b77f;box-shadow:inset 0 0 0 10px #713447,inset 0 0 0 11px #d8b97f}
-.book.open .cover{transform:rotateY(-158deg)}
+.cover{position:absolute;inset:0;border-radius:5px 16px 16px 5px;transform-origin:left center;transform:rotateY(0);backface-visibility:hidden;z-index:5;transition:transform 1.35s cubic-bezier(.2,.75,.2,1),opacity .35s 1s;will-change:transform;isolation:isolate;background:linear-gradient(135deg,#78394b,#4a1e30 70%,#351625);border:1px solid #d3b77f;box-shadow:inset 0 0 0 10px #713447,inset 0 0 0 11px #d8b97f}
+.book.open .cover{transform:rotateY(-165deg);z-index:1;pointer-events:none;opacity:0;transition:transform 1.15s cubic-bezier(.2,.75,.2,1),opacity .25s .95s}
 .cover:before{content:"";position:absolute;inset:25px;border:1px solid #d7b982}
 .cover:after{content:"";position:absolute;inset:34px;border:1px solid #b98d5e;opacity:.5}
 .cover-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;color:#f9e9c9;backface-visibility:hidden}
@@ -41,6 +41,10 @@ body:before{content:"";position:fixed;inset:9px;border:1px solid #b99765;pointer
 .open-btn{position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);z-index:8;border:1px solid var(--gold);background:#fffaf0;color:var(--wine);padding:14px 27px;font-size:10px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;cursor:pointer;box-shadow:0 9px 22px #55352820;transition:.25s}
 .open-btn:hover{background:var(--wine);color:#fff}
 .book.open .open-btn{opacity:0;pointer-events:none}
+.book.open .inside{z-index:4}
+.book.open .inside-scroll{overscroll-behavior:contain}
+.scroll-cue{display:block;text-align:center;font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:#98764e;margin:8px auto 12px}
+
 .inner-top{color:var(--wine);font-size:9px;letter-spacing:3px;text-transform:uppercase}
 .inner-flower{font-size:36px;color:#b88e55;margin:10px 0 2px}
 h1{font:500 clamp(39px,8vw,55px)/.92 'Cormorant Garamond',serif;color:var(--wine);margin:10px 0 12px}
@@ -81,17 +85,16 @@ h1{font:500 clamp(39px,8vw,55px)/.92 'Cormorant Garamond',serif;color:var(--wine
 <div class="inner-flower">❀</div>
 <h1>A Little One's<br>Special Day</h1>
 <p class="welcome">A new beginning, a beautiful blessing, and a day to remember.</p>
-<p class="intro">With joyful hearts, we invite you and your family to join us for our little one's naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.</p>
-<div class="gold-divider"></div>
-<div class="invite-label">Hosted with love by</div>
-<div class="parents">Sridhar Prasanth &amp; Sathya</div>
-<div class="gold-divider"></div>
 <div class="invite-label">Please join us</div>
 <div class="event-date">Sunday · 13 December 2026</div>
 <div class="info-grid">
 <div class="info"><div class="info-icon">◷</div><h2>Time</h2><p>To be announced</p></div>
 <div class="info"><div class="info-icon">⌖</div><h2>Venue</h2><p>At the baby's mother's home<br>Erode, Tamil Nadu</p></div>
 </div>
+<div class="invite-label">Hosted with love by</div>
+<div class="parents">Sridhar Prasanth &amp; Sathya</div>
+<p class="intro">With joyful hearts, we invite you and your family to join us for our little one's naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.</p>
+<div class="scroll-cue">↓ Scroll inside the invitation for the full message ↓</div>
 <div class="countdown-label">Counting the days until we celebrate</div>
 <div class="countdown"><div class="unit"><strong id="days">--</strong><span>Days</span></div><div class="unit"><strong id="hours">--</strong><span>Hours</span></div><div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div><div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div></div>
 <div class="gold-divider"></div>
@@ -110,7 +113,7 @@ h1{font:500 clamp(39px,8vw,55px)/.92 'Cormorant Garamond',serif;color:var(--wine
 </div>
 <script>
 const book=document.getElementById('book'),openBtn=document.getElementById('openBtn');
-function openBook(){if(book.classList.contains('open'))return;book.classList.add('open');openBtn.textContent='Enjoy the celebration details';for(let i=0;i<34;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','✧'][i%3];p.style.left=Math.random()*100+'vw';p.style.animationDuration=(4+Math.random()*5)+'s';p.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(p);setTimeout(()=>p.remove(),9500)}}
+function openBook(){if(book.classList.contains('open'))return;book.classList.add('open');openBtn.textContent='Invitation opened';document.querySelector('.inside-scroll').scrollTop=0;for(let i=0;i<34;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','✧'][i%3];p.style.left=Math.random()*100+'vw';p.style.animationDuration=(4+Math.random()*5)+'s';p.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(p);setTimeout(()=>p.remove(),9500)}}
 openBtn.addEventListener('click',openBook);document.getElementById('cover').addEventListener('click',openBook);
 const eventDate=new Date('2026-12-13T00:00:00+05:30');
 function tick(){let remaining=Math.max(0,eventDate-Date.now());for(const [id,size] of Object.entries({days:86400000,hours:3600000,minutes:60000,seconds:1000})){document.getElementById(id).textContent=String(Math.floor(remaining/size));remaining%=size}}
