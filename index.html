@@ -2,108 +2,120 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f8f0e5">
-<meta name="description" content="An invitation to a special family naming ceremony on Sunday, 13 December 2026.">
-<title>A Special Day — Naming Ceremony Invitation</title>
+<meta name="theme-color" content="#f7efe2">
+<meta name="description" content="A family naming ceremony invitation — Sunday, 13 December 2026, Erode, Tamil Nadu.">
+<title>A Day of Blessings — Family Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f8f0e5;--paper:#fffaf2;--wine:#682b3b;--gold:#c09a60;--ink:#422c2b;--muted:#816c61}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:10px;border:1px solid #c6a879;pointer-events:none;z-index:20}
-button,a{font:inherit}.hero{min-height:100svh;display:grid;place-items:center;padding:55px 20px 70px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#fffdf8 0,#f6eadb 68%,#ead9c6 100%);perspective:1400px}
-.hero:before,.hero:after{content:"";position:absolute;width:min(80vw,650px);aspect-ratio:1;border:1px solid #d7bd94;border-radius:50%;opacity:.45;animation:orbit 28s linear infinite}
-.hero:after{width:min(67vw,540px);animation-direction:reverse;border-style:dashed;opacity:.35}
-@keyframes orbit{to{transform:rotate(360deg)}}
-.book-wrap{position:relative;z-index:2;width:min(88vw,390px);height:510px;max-height:68svh;min-height:430px;perspective:1800px;filter:drop-shadow(0 30px 28px #573d3030)}
-.book{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1.35s cubic-bezier(.2,.75,.2,1);transform:rotateY(-9deg) rotateX(2deg)}
+:root{--wine:#642b3c;--wine2:#3f1b2a;--gold:#c6a36b;--pale:#f8efdf;--paper:#fffaf0;--ink:#493532;--muted:#826c60}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--ink);font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 50% 25%,#fffaf1 0,#f2e4d2 58%,#dfcbb5 100%)}
+body:before{content:"";position:fixed;inset:9px;border:1px solid #b99765;pointer-events:none;z-index:30}
+.stage{min-height:100svh;display:grid;place-items:center;padding:48px 18px 65px;perspective:1800px;position:relative;isolation:isolate}
+.stage:before,.stage:after{content:"";position:absolute;width:min(86vw,720px);aspect-ratio:1;border:1px solid #c9ad82;border-radius:50%;opacity:.4;z-index:-1;animation:halo 36s linear infinite}
+.stage:after{width:min(72vw,590px);border-style:dashed;animation-direction:reverse;opacity:.3}
+@keyframes halo{to{transform:rotate(360deg)}}
+.ambient{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.spark{position:absolute;color:#b58a54;opacity:.55;animation:twinkle 3s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.15;transform:scale(.65) rotate(35deg)}}
+.book-shell{width:min(92vw,570px);height:min(790px,84svh);min-height:620px;position:relative;perspective:2200px;filter:drop-shadow(0 32px 28px #42252b35)}
+.book{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(-7deg) rotateX(1deg);transition:transform 1.2s cubic-bezier(.2,.75,.2,1)}
 .book.open{transform:rotateY(0) rotateX(0)}
-.book-cover,.book-inside{position:absolute;inset:0;border-radius:5px 13px 13px 5px;backface-visibility:hidden;overflow:hidden}
-.book-cover{transform-origin:left center;background:linear-gradient(135deg,#713344,#4a1e2d);border:1px solid #c7a66f;box-shadow:inset 0 0 0 9px #713344,inset 0 0 0 10px #d3b47b;display:grid;place-items:center;color:#f6e7c9;transition:transform 1.35s cubic-bezier(.2,.75,.2,1);z-index:3}
-.book.open .book-cover{transform:rotateY(-158deg)}
-.book-cover:before{content:"";position:absolute;inset:24px;border:1px solid #d6b77d;opacity:.8}
-.cover-content{text-align:center;padding:35px;transform:translateZ(2px)}
-.cover-flower{font-size:48px;color:#e2c48f;display:block;margin-bottom:25px;animation:float 4s ease-in-out infinite}
-.cover-kicker{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#e8d3af}
-.cover-title{font:500 clamp(37px,8vw,52px)/.98 'Cormorant Garamond',serif;margin:20px 0;color:#fff4df}
-.cover-line{width:75px;height:1px;background:#d9bd8d;margin:23px auto}
-.cover-date{font-size:10px;letter-spacing:2px;color:#f2dfbd}
-.book-inside{background:linear-gradient(120deg,#fffaf1,#f5e8d8);border:1px solid #d7c09c;box-shadow:inset 0 0 0 10px #fffaf1,inset 0 0 0 11px #d9c39e;display:grid;place-items:center;padding:34px 27px;text-align:center}
-.book-inside:before{content:"";position:absolute;inset:23px;border:1px solid #decaa8;pointer-events:none}
-.inside-content{position:relative;z-index:1;opacity:.35;transform:translateY(12px);transition:opacity .8s .55s,transform .8s .55s}
-.book.open .inside-content{opacity:1;transform:translateY(0)}
-.inside-content .small{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--wine)}
-.inside-content h1{font:500 clamp(38px,8vw,54px)/.95 'Cormorant Garamond',serif;color:var(--wine);margin:20px 0}
-.inside-content p{font:21px/1.45 'Cormorant Garamond',serif;color:#725d54;margin:10px auto;max-width:270px}
-.inside-content .date{font:10px 'DM Sans',sans-serif;letter-spacing:2px;text-transform:uppercase;margin-top:24px}
-.tap-hint{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#f5e4c5;font-size:9px;letter-spacing:2px;text-transform:uppercase;animation:pulse 1.8s infinite}
-@keyframes pulse{50%{opacity:.45}}@keyframes float{50%{transform:translateY(-9px) rotate(5deg)}}
-.open-btn{position:absolute;bottom:-54px;left:50%;transform:translateX(-50%);white-space:nowrap;border:1px solid var(--gold);background:#fffaf2;color:var(--wine);padding:13px 24px;letter-spacing:2px;text-transform:uppercase;font-size:10px;cursor:pointer;box-shadow:0 8px 20px #50352a1c}
+.pages{position:absolute;inset:7px 4px 7px 12px;border-radius:5px 16px 16px 5px;background:repeating-linear-gradient(90deg,#e5d6bd 0 2px,#fffaf0 2px 5px);box-shadow:8px 7px 0 #c6aa7e,12px 12px 20px #553d3020}
+.inside{position:absolute;inset:0;border-radius:5px 16px 16px 5px;overflow:hidden;background:linear-gradient(135deg,#fffdf7,#f5e8d6);border:1px solid #c7a66e;box-shadow:inset 0 0 0 9px #fffaf0,inset 0 0 0 10px #d6bd91;transform:translateZ(-2px)}
+.inside:before{content:"";position:absolute;inset:22px;border:1px solid #ddc69e;pointer-events:none}
+.inside-scroll{position:absolute;inset:31px 34px;overflow:auto;text-align:center;padding:12px 9px 22px;scrollbar-width:thin;scrollbar-color:#c7a66e transparent}
+.cover{position:absolute;inset:0;border-radius:5px 16px 16px 5px;transform-origin:left center;transform:rotateY(0);backface-visibility:hidden;z-index:5;transition:transform 1.35s cubic-bezier(.2,.75,.2,1);background:linear-gradient(135deg,#78394b,#4a1e30 70%,#351625);border:1px solid #d3b77f;box-shadow:inset 0 0 0 10px #713447,inset 0 0 0 11px #d8b97f}
+.book.open .cover{transform:rotateY(-158deg)}
+.cover:before{content:"";position:absolute;inset:25px;border:1px solid #d7b982}
+.cover:after{content:"";position:absolute;inset:34px;border:1px solid #b98d5e;opacity:.5}
+.cover-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;color:#f9e9c9;backface-visibility:hidden}
+.lotus{font-size:65px;color:#e3c38e;line-height:1;filter:drop-shadow(0 4px 5px #170b12);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px) rotate(5deg)}}
+.cover-kicker,.eyebrow{font-size:9px;letter-spacing:3.5px;text-transform:uppercase}
+.cover-title{font:500 clamp(48px,10vw,70px)/.9 'Cormorant Garamond',serif;margin:26px 0 22px;color:#fff4df}
+.gold-rule{width:95px;height:1px;background:linear-gradient(90deg,transparent,#d9bd88,transparent);margin:8px auto 22px}
+.cover-date{font-size:11px;letter-spacing:3px}
+.cover-hint{position:absolute;bottom:48px;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;animation:breathe 1.8s infinite}
+@keyframes breathe{50%{opacity:.45}}
+.open-btn{position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);z-index:8;border:1px solid var(--gold);background:#fffaf0;color:var(--wine);padding:14px 27px;font-size:10px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;cursor:pointer;box-shadow:0 9px 22px #55352820;transition:.25s}
 .open-btn:hover{background:var(--wine);color:#fff}
-.hero-note{position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#876e5c}
-.section{padding:90px 22px;text-align:center;position:relative}.section-inner{max-width:760px;margin:auto}.eyebrow{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--wine)}
-h2{font:500 clamp(40px,7vw,62px)/1 'Cormorant Garamond',serif;color:var(--wine);margin:16px 0 22px}
-.lead{font:25px/1.45 'Cormorant Garamond',serif;color:#6b5550}.copy{max-width:560px;margin:0 auto;color:var(--muted);font-size:13px;line-height:2}
-.rule{width:90px;height:1px;background:var(--gold);margin:28px auto}
-.details{background:linear-gradient(145deg,#f0e2d2,#f8f0e5)}.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:38px auto 0;max-width:660px}
-.detail{padding:28px 16px;background:#fffaf2;border:1px solid #d7c09b;box-shadow:8px 9px 0 #d8c3a444;transform:translateY(20px);opacity:0;transition:opacity .7s,transform .7s}
-.detail.visible{opacity:1;transform:translateY(0)}.detail .symbol{font-size:25px;color:var(--gold)}
-.detail h3{font:500 26px 'Cormorant Garamond',serif;color:var(--wine);margin:10px 0}.detail p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
-.countdown{display:flex;justify-content:center;gap:10px;margin:30px auto}.time{min-width:65px;padding:13px 7px;border:1px solid #d5bc92;background:#fffaf2}
-.time strong{display:block;font:34px 'Cormorant Garamond',serif;color:var(--wine)}.time span{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-.btn{display:inline-block;margin:22px 5px 0;padding:14px 22px;border:1px solid var(--wine);color:var(--wine);text-decoration:none;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;background:transparent}
-.btn.primary{background:var(--wine);color:#fff}.blessing{background:linear-gradient(135deg,#682b3b,#421d2b);color:#fff8ef}
-.blessing h2{color:#f3dfbd}.blessing .copy{color:#f4e6da}.blessing .lead{color:#f3dfbd}
-.footer{padding:55px 20px;text-align:center}.footer-mark{font:48px 'Cormorant Garamond',serif;color:var(--wine)}.tiny{font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
-.petal{position:fixed;top:-25px;z-index:30;pointer-events:none;animation:fall linear forwards;color:#c78d91}@keyframes fall{to{transform:translateY(110vh) rotate(440deg);opacity:0}}
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .9s,transform .9s}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:520px){.book-wrap{height:460px;min-height:420px}.detail-grid{grid-template-columns:1fr}.section{padding:72px 24px}.countdown{gap:5px}.time{min-width:58px}.hero-note{font-size:8px}}
+.book.open .open-btn{opacity:0;pointer-events:none}
+.inner-top{color:var(--wine);font-size:9px;letter-spacing:3px;text-transform:uppercase}
+.inner-flower{font-size:36px;color:#b88e55;margin:10px 0 2px}
+h1{font:500 clamp(39px,8vw,55px)/.92 'Cormorant Garamond',serif;color:var(--wine);margin:10px 0 12px}
+.welcome{font:23px/1.25 'Cormorant Garamond',serif;color:#735a50;margin:12px auto;max-width:420px}
+.intro{font-size:12px;line-height:1.9;color:var(--muted);max-width:420px;margin:15px auto}
+.gold-divider{width:80px;height:1px;background:var(--gold);margin:20px auto}
+.parents{font:italic 23px 'Cormorant Garamond',serif;color:var(--wine);margin:12px 0}
+.invite-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#98764e;margin-top:16px}
+.event-date{font:600 22px 'Cormorant Garamond',serif;color:var(--wine);margin:7px 0}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 15px;max-width:440px}
+.info{background:#fffaf2;border:1px solid #ddc9a5;padding:15px 9px;box-shadow:4px 5px 0 #d9c6a644}
+.info-icon{font-size:20px;color:#b38b55}.info h2{font:500 22px 'Cormorant Garamond',serif;color:var(--wine);margin:5px 0}
+.info p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+.countdown-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#98764e;margin-top:17px}
+.countdown{display:flex;justify-content:center;gap:7px;margin:10px auto 17px}
+.unit{width:62px;padding:8px 4px;background:#f4e9d8;border:1px solid #ddc9a5}
+.unit strong{display:block;font:30px 'Cormorant Garamond',serif;color:var(--wine)}.unit span{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.blessing{font:italic 21px/1.35 'Cormorant Garamond',serif;color:#755b50;margin:16px auto 7px;max-width:420px}
+.thanks{font-size:10px;line-height:1.8;color:var(--muted);margin:10px auto 0;max-width:400px}
+.calendar{display:inline-block;margin:15px auto 0;padding:11px 17px;background:var(--wine);color:#fff8eb;text-decoration:none;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;border:1px solid #a98256}
+.scroll-note{font-size:8px;letter-spacing:1.5px;color:#a18a72;text-transform:uppercase;margin-top:18px}
+.petal{position:fixed;top:-25px;z-index:40;pointer-events:none;color:#c78d91;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(460deg);opacity:0}}
+@media(max-width:520px){.stage{padding:35px 13px 55px}.book-shell{height: min(800px,86svh);min-height:640px;width:94vw}.inside-scroll{inset:25px 24px;padding:10px 5px 18px}.inside:before{inset:16px}.cover-content{padding:30px}.cover-title{font-size:56px}.intro{font-size:11px}.info-grid{gap:7px}.info{padding:12px 5px}.info p{font-size:10px}.welcome{font-size:21px}}
+@media(max-height:720px){.book-shell{height:84svh;min-height:560px}.inside-scroll{inset:24px 28px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="hero">
-<div class="book-wrap">
+<div class="stage">
+<div class="ambient" aria-hidden="true"><span class="spark" style="top:15%;left:16%">✧</span><span class="spark" style="top:23%;right:14%;animation-delay:1s">✦</span><span class="spark" style="bottom:20%;left:12%;animation-delay:2s">✧</span><span class="spark" style="bottom:17%;right:13%;animation-delay:.5s">✦</span></div>
+<div class="book-shell">
 <div class="book" id="book">
-<div class="book-inside"><div class="inside-content"><div class="small">With the blessings of the Almighty</div><h1>A Little One's<br>Special Day</h1><p>We invite you to share in a joyful family celebration.</p><div class="rule"></div><div class="date">Sunday · 13 December 2026</div><p style="font-size:17px;margin-top:25px">With love, Sridhar Prasanth &amp; Sathya</p></div></div>
-<div class="book-cover" id="cover"><div class="cover-content"><span class="cover-flower">✿</span><div class="cover-kicker">A cherished family occasion</div><div class="cover-title">A Day of<br>Blessings</div><div class="cover-line"></div><div class="cover-date">13 · 12 · 2026</div></div><div class="tap-hint">Tap to open</div></div>
+<div class="pages"></div>
+<div class="inside">
+<div class="inside-scroll">
+<div class="inner-top">With the blessings of the Almighty</div>
+<div class="inner-flower">❀</div>
+<h1>A Little One's<br>Special Day</h1>
+<p class="welcome">A new beginning, a beautiful blessing, and a day to remember.</p>
+<p class="intro">With joyful hearts, we invite you and your family to join us for our little one's naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.</p>
+<div class="gold-divider"></div>
+<div class="invite-label">Hosted with love by</div>
+<div class="parents">Sridhar Prasanth &amp; Sathya</div>
+<div class="gold-divider"></div>
+<div class="invite-label">Please join us</div>
+<div class="event-date">Sunday · 13 December 2026</div>
+<div class="info-grid">
+<div class="info"><div class="info-icon">◷</div><h2>Time</h2><p>To be announced</p></div>
+<div class="info"><div class="info-icon">⌖</div><h2>Venue</h2><p>At the baby's mother's home<br>Erode, Tamil Nadu</p></div>
 </div>
-<button class="open-btn" id="openBtn" type="button">Open the invitation</button>
+<div class="countdown-label">Counting the days until we celebrate</div>
+<div class="countdown"><div class="unit"><strong id="days">--</strong><span>Days</span></div><div class="unit"><strong id="hours">--</strong><span>Hours</span></div><div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div><div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div></div>
+<div class="gold-divider"></div>
+<p class="blessing">“May this little life be filled with love, wisdom, good health and happiness.”</p>
+<p class="thanks">We would be grateful for your blessings and good wishes as our little one begins a beautiful journey. Thank you for being part of our family's special moments.</p>
+<a class="calendar" id="calendar" href="#">Add to Calendar</a>
+<div class="scroll-note">A day made brighter by your presence · Erode, Tamil Nadu</div>
 </div>
-<div class="hero-note">An invitation made with love · Erode, Tamil Nadu</div>
-</header>
-<main>
-<section class="section reveal" id="invitation"><div class="section-inner">
-<div class="eyebrow">A special day for our family</div><h2>You're warmly invited</h2>
-<p class="lead">A new beginning, a beautiful blessing, and a day to remember.</p>
-<p class="copy">With joyful hearts, we invite you and your family to join us for our little one's naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating together.</p>
-<div class="rule"></div><p class="tiny">With love · Sridhar Prasanth &amp; Sathya</p>
-</div></section>
-<section class="section details"><div class="section-inner reveal">
-<div class="eyebrow">Save the date</div><h2>The Celebration</h2>
-<div class="countdown" aria-label="Countdown"><div class="time"><strong id="days">--</strong><span>Days</span></div><div class="time"><strong id="hours">--</strong><span>Hours</span></div><div class="time"><strong id="minutes">--</strong><span>Minutes</span></div><div class="time"><strong id="seconds">--</strong><span>Seconds</span></div></div>
-<div class="detail-grid">
-<div class="detail"><div class="symbol">❧</div><h3>Date</h3><p>Sunday<br>13 December 2026</p></div>
-<div class="detail"><div class="symbol">◷</div><h3>Time</h3><p>Time to be announced</p></div>
-<div class="detail"><div class="symbol">⌖</div><h3>Venue</h3><p>Venue details to be announced<br>Erode, Tamil Nadu</p></div>
-<div class="detail"><div class="symbol">♡</div><h3>Gathering</h3><p>Join us with your family<br>and share your blessings</p></div>
 </div>
-<a class="btn primary" id="calendar" href="#">Add to Calendar</a>
-</div></section>
-<section class="section reveal"><div class="section-inner"><div class="eyebrow">A blessing we treasure</div><h2>Made brighter by you</h2><p class="lead">“May this little life be filled with love, wisdom, good health and happiness.”</p><p class="copy">We would be grateful for your blessings and good wishes as our little one begins a beautiful journey.</p></div></section>
-<section class="section blessing"><div class="section-inner reveal"><div class="cover-flower" style="color:#e4c89c">✺</div><div class="eyebrow" style="color:#e4c89c">With love and gratitude</div><h2>We can't wait to celebrate with you</h2><p class="copy">Thank you for being part of our family's special moments.</p><p class="lead">Sridhar Prasanth &amp; Sathya</p></div></section>
-</main>
-<footer class="footer"><div class="footer-mark">With Love</div><p class="tiny">13 · 12 · 2026 &nbsp; | &nbsp; Erode, Tamil Nadu</p></footer>
+<div class="cover" id="cover">
+<div class="cover-content"><div class="lotus">❀</div><div class="cover-kicker">A cherished family occasion</div><div class="cover-title">A Day of<br>Blessings</div><div class="gold-rule"></div><div class="cover-date">SUNDAY · 13 DECEMBER 2026</div><div class="cover-hint">Tap to unfold your invitation</div></div>
+</div>
+</div>
+<button class="open-btn" id="openBtn" type="button">Open your invitation ✧</button>
+</div>
+</div>
 <script>
 const book=document.getElementById('book'),openBtn=document.getElementById('openBtn');
-function openBook(){book.classList.add('open');openBtn.textContent='Invitation opened';openBtn.disabled=true;for(let i=0;i<22;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','·'][i%3];p.style.left=Math.random()*100+'vw';p.style.animationDuration=(4+Math.random()*4)+'s';p.style.fontSize=(12+Math.random()*13)+'px';document.body.appendChild(p);setTimeout(()=>p.remove(),8500)}}
+function openBook(){if(book.classList.contains('open'))return;book.classList.add('open');openBtn.textContent='Enjoy the celebration details';for(let i=0;i<34;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','✧'][i%3];p.style.left=Math.random()*100+'vw';p.style.animationDuration=(4+Math.random()*5)+'s';p.style.fontSize=(12+Math.random()*17)+'px';document.body.appendChild(p);setTimeout(()=>p.remove(),9500)}}
 openBtn.addEventListener('click',openBook);document.getElementById('cover').addEventListener('click',openBook);
-const eventDate=new Date('2026-12-13T10:00:00+05:30');
-function tick(){let d=Math.max(0,eventDate-Date.now());const units={days:86400000,hours:3600000,minutes:60000,seconds:1000};for(const [id,size] of Object.entries(units)){const el=document.getElementById(id);el.textContent=String(Math.floor(d/size));d%=size}}
+const eventDate=new Date('2026-12-13T00:00:00+05:30');
+function tick(){let remaining=Math.max(0,eventDate-Date.now());for(const [id,size] of Object.entries({days:86400000,hours:3600000,minutes:60000,seconds:1000})){document.getElementById(id).textContent=String(Math.floor(remaining/size));remaining%=size}}
 tick();setInterval(tick,1000);
-const start='20261213T043000Z',end='20261213T053000Z';
-const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Family Celebration//Naming Ceremony//EN','BEGIN:VEVENT','UID:family-naming-20261213@example.com','DTSTAMP:20261127T000000Z','DTSTART:'+start,'DTEND:'+end,'SUMMARY:Naming Ceremony','LOCATION:Erode, Tamil Nadu','DESCRIPTION:Join us for a family naming ceremony.','END:VEVENT','END:VCALENDAR'].join('\r\n');
+const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Family Celebration//Naming Ceremony//EN','BEGIN:VEVENT','UID:family-naming-20261213@example.com','DTSTAMP:20261127T000000Z','DTSTART;VALUE=DATE:20261213','DTEND;VALUE=DATE:20261214','SUMMARY:Naming Ceremony','LOCATION:At the baby\'s mother\'s home, Erode, Tamil Nadu','DESCRIPTION:Join us for a family naming ceremony. Time to be announced.','END:VEVENT','END:VCALENDAR'].join('\r\n');
 const cal=document.getElementById('calendar');cal.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));cal.download='family-naming-ceremony.ics';
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal,.detail').forEach(el=>observer.observe(el));
-</script></body></html>
+</script>
+</body></html>
