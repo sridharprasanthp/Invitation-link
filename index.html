@@ -27,31 +27,9 @@
 .start{position:absolute;inset:0;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4cqw;background:radial-gradient(ellipse at 50% 35%,#13656a,#06222b 70%,#030f16);text-align:center;transition:opacity .7s;cursor:pointer;padding:0 10cqw}.start.hide{opacity:0;pointer-events:none}.start .pulse{animation:br 1.8s infinite}@keyframes br{50%{opacity:.45}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
-/* Guest experience additions */
-.feature-tools{position:absolute;left:6cqw;top:9cqw;z-index:28;display:flex;gap:1.5cqw}
+
+.feature-tools{position:absolute;left:6cqw;top:9cqw;z-index:28}
 .tool-btn{width:9cqw;height:9cqw;border-radius:50%;border:1px solid #e2c28388;background:#0008;color:var(--gold);font-size:3.7cqw;display:grid;place-items:center;cursor:pointer}
-.feature-panel{position:absolute;inset:0;z-index:38;display:none;align-items:center;justify-content:center;padding:9cqw;background:#020b10dd;backdrop-filter:blur(9px)}
-.feature-panel.open{display:flex}
-.panel-card{width:100%;max-height:82%;overflow:auto;border:1px solid #e2c28399;background:linear-gradient(145deg,#10484b,#061e27);padding:6cqw 5cqw;box-shadow:0 3cqw 9cqw #000b;text-align:center}
-.panel-title{font:600 9cqw 'Cormorant Garamond',serif;color:var(--gold);margin:0 0 2cqw}
-.panel-copy{font-size:3.1cqw;line-height:1.6;color:#e4e8df}
-.panel-input,.panel-textarea{width:100%;padding:3cqw;margin:2cqw 0;background:#ffffff12;border:1px solid #e2c28377;color:var(--cream);font:3cqw 'DM Sans',sans-serif;border-radius:1cqw}
-.panel-input::placeholder,.panel-textarea::placeholder{color:#c3d2c8}
-.panel-textarea{min-height:20cqw;resize:vertical}
-.panel-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:2cqw;margin-top:3cqw}
-.panel-actions .btn{font-size:2.7cqw;padding:2.5cqw 4cqw}
-.close-panel{position:absolute;right:10cqw;top:7cqw;border:1px solid #e2c28388;background:#061e27;color:var(--gold);width:9cqw;height:9cqw;border-radius:50%;font-size:5cqw;z-index:2}
-.language-btn{position:absolute;top:9cqw;left:17cqw;z-index:27;border:1px solid #e2c28388;border-radius:8cqw;background:#0008;color:var(--gold);padding:2.5cqw 3cqw;font-size:2.8cqw}
-.envelope{width:58cqw;height:38cqw;position:relative;filter:drop-shadow(0 3cqw 4cqw #0009);animation:envelopeFloat 2.8s ease-in-out infinite}
-.envelope-base{position:absolute;inset:0;background:linear-gradient(145deg,#f6dfaa,#b88a48);clip-path:polygon(0 0,100% 0,100% 100%,0 100%);border:1px solid #fff0c4}
-.envelope-flap{position:absolute;inset:0;background:linear-gradient(145deg,#fff0c4,#c49a59);clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top;animation:flapOpen 2.2s ease-in-out forwards}
-.envelope-letter{position:absolute;left:10%;right:10%;bottom:5%;height:72%;background:linear-gradient(#fff6df,#e8c98f);color:#6b4925;display:grid;place-items:center;font:italic 600 6cqw 'Cormorant Garamond',serif;animation:letterRise 2.4s ease-out forwards}
-@keyframes flapOpen{to{transform:rotateX(180deg);z-index:0}}@keyframes letterRise{0%{transform:translateY(25%);opacity:0}55%{opacity:1}100%{transform:translateY(-12%)}}
-@keyframes envelopeFloat{50%{transform:translateY(-2cqw)}}
-.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:2cqw;margin-top:3cqw}
-.gallery-tile{min-height:25cqw;border:1px solid #e2c28377;background:radial-gradient(circle at 50% 35%,#d5b77a55,#0b3a40);display:grid;place-items:center;color:#f5dfb2;font:italic 5cqw 'Cormorant Garamond',serif;padding:3cqw}
-.gallery-tile:first-child{grid-column:span 2;min-height:30cqw}
-@media(prefers-reduced-motion:reduce){.envelope,.envelope-flap,.envelope-letter{animation:none!important}}
 </style>
 </head>
 <body>
@@ -63,33 +41,8 @@
 <div class="scene" id="s3"><div class="kick gold">Hosted with love by</div><div class="names gold">Sridhar Prasanth<br>&amp; Sathya</div><div class="rule"></div><p class="small">With joyful hearts, we invite you and your family to join us for our little one’s naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.</p></div>
 <div class="scene" id="s4"><div class="event-date" id="eventDate"><div class="kick gold">Sunday</div><div class="mid gold">13 December 2026</div></div><div class="grid"><div class="card"><div class="ic">◷</div><h2>Time</h2><p class="event-time" id="eventTime">7:30 AM – 9:00 AM</p></div><div class="card"><div class="ic">⌖</div><h2>Venue</h2><p>At the Baby’s Mother’s Home</p></div></div><div class="kick gold">Counting the days until we celebrate</div><div class="event-status" id="eventStatus" aria-live="polite"></div><div class="count" id="countdown"><div class="unit"><strong id="days">--</strong><span>Days</span></div><div class="unit"><strong id="hours">--</strong><span>Hours</span></div><div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div><div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div></div><p class="quote">“May this little life be filled with love, wisdom, good health and happiness.”</p><p class="small">We would be grateful for your blessings and good wishes as our little one begins a beautiful journey. Thank you for being part of our family’s special moments.</p></div>
 <div class="dust" id="dust"></div></div></div>
-<div class="music-host" id="musicHost"><div id="musicPlayer"></div></div><div class="bars" id="bars"><b><i></i></b><b><i></i></b><b><i></i></b><b><i></i></b><b><i></i></b></div><div class="nav" id="nav"><div></div><div></div></div><div class="feature-tools"><button class="tool-btn" id="shareBtn" type="button" aria-label="Share invitation" title="Share invitation">↗</button><button class="tool-btn" id="featuresBtn" type="button" aria-label="Guest features" title="Guest features">✧</button></div><button class="language-btn" id="languageBtn" type="button" aria-label="Switch language">தமிழ்</button><button class="snd" id="snd" type="button" aria-label="Toggle music" title="Music On/Off">♪</button><button class="calendar-btn" id="calendarBtn" type="button" aria-label="Add to calendar" title="Add to calendar" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" width="58%" height="58%" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h2M14 14h2M8 17h2"/></svg></button><div class="calendar-menu" id="calendarMenu" role="menu" aria-label="Choose calendar"><button type="button" id="googleCalendar" role="menuitem">Google Calendar</button><button type="button" id="appleCalendar" role="menuitem">Apple Calendar / .ics</button></div>
-<div class="start" id="start"><div class="envelope" aria-hidden="true"><div class="envelope-base"></div><div class="envelope-letter">With love &amp; blessings</div><div class="envelope-flap"></div></div><div class="lotus" style="margin:0"><div class="lp" id="lotus2"></div></div><div class="big gold" style="font-size:12cqw">You are<br>invited</div><div class="kick gold pulse">Tap to begin · sound on ♪</div></div>
-<div class="feature-panel" id="featurePanel" aria-hidden="true">
- <button class="close-panel" id="closePanel" type="button" aria-label="Close">×</button>
- <div class="panel-card">
-  <h2 class="panel-title" id="panelTitle">A little more to share</h2>
-  <p class="panel-copy" id="panelIntro">Celebrate this special day with us. Share the invitation, send your wishes, or let us know if you can join.</p>
-  <div id="panelHome" class="panel-actions">
-   <button class="btn" id="panelShare" type="button">Share invitation</button>
-   <button class="btn" id="panelRsvp" type="button">RSVP</button>
-   <button class="btn" id="panelBless" type="button">Send a blessing</button>
-   <button class="btn" id="panelVoice" type="button">Play voice invitation</button>
-   <button class="btn" id="panelGallery" type="button">Family moments</button>
-  </div>
-  <div id="panelForm" hidden>
-   <input class="panel-input" id="guestName" placeholder="Your name" maxlength="60">
-   <textarea class="panel-textarea" id="guestMessage" placeholder="Write your message..." maxlength="500"></textarea>
-   <div class="panel-actions"><button class="btn" id="sendMessage" type="button">Continue in WhatsApp</button><button class="btn" id="backPanel" type="button">Back</button></div>
-   <p class="panel-copy">WhatsApp will open with your message ready to send. Choose the host or family group. Messages are not stored on this invitation website.</p>
-  </div>
-  <div id="panelGalleryView" hidden>
-   <div class="gallery-grid"><div class="gallery-tile">A day of blessings</div><div class="gallery-tile">Family</div><div class="gallery-tile">Togetherness</div></div>
-   <p class="panel-copy">A family photo gallery can be added here when you share the pictures you want to display.</p>
-   <div class="panel-actions"><button class="btn" id="galleryBack" type="button">Back</button></div>
-  </div>
- </div>
-</div>
+<div class="music-host" id="musicHost"><div id="musicPlayer"></div></div><div class="bars" id="bars"><b><i></i></b><b><i></i></b><b><i></i></b><b><i></i></b><b><i></i></b></div><div class="nav" id="nav"><div></div><div></div></div><div class="feature-tools"><button class="tool-btn" id="shareBtn" type="button" aria-label="Share invitation" title="Share invitation">↗</button></div><button class="snd" id="snd" type="button" aria-label="Toggle music" title="Music On/Off">♪</button><button class="calendar-btn" id="calendarBtn" type="button" aria-label="Add to calendar" title="Add to calendar" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" width="58%" height="58%" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h2M14 14h2M8 17h2"/></svg></button><div class="calendar-menu" id="calendarMenu" role="menu" aria-label="Choose calendar"><button type="button" id="googleCalendar" role="menuitem">Google Calendar</button><button type="button" id="appleCalendar" role="menuitem">Apple Calendar / .ics</button></div>
+<div class="start" id="start"><div class="lotus" style="margin:0"><div class="lp" id="lotus2"></div></div><div class="big gold" style="font-size:12cqw">You are<br>invited</div><div class="kick gold pulse">Tap to begin · sound on ♪</div></div>
 </div>
 <script>
 const $=id=>document.getElementById(id);
@@ -147,85 +100,13 @@ function tick(){
  }
 }
 
-/* Guest features: sharing, RSVP and blessings use WhatsApp so no guest data is stored. */
-const panel=$('featurePanel'),panelHome=$('panelHome'),panelForm=$('panelForm'),panelGalleryView=$('panelGalleryView');
-function openPanel(){panel.classList.add('open');panel.setAttribute('aria-hidden','false');panelHome.hidden=false;panelForm.hidden=true;panelGalleryView.hidden=true}
-function closePanel(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true')}
-$('featuresBtn').onclick=openPanel;$('closePanel').onclick=closePanel;
-panel.addEventListener('click',e=>{if(e.target===panel)closePanel()});
+
 function shareInvitation(){
- const text='You are warmly invited to our little one’s naming ceremony! Sunday, 13 December 2026, 7:30 AM – 9:00 AM. Venue: At the Baby’s Mother’s Home. Hosted by Sridhar Prasanth & Sathya.\n\nInvitation: '+location.href;
+ const text='You are warmly invited to our little one’s naming ceremony! Sunday, 13 December 2026, 7:30 AM – 9:00 AM. Venue: At the Baby’s Mother’s Home. Hosted by Sridhar Prasanth & Sathya.\\n\\nInvitation: '+location.href;
  if(navigator.share){navigator.share({title:'A Day of Blessings — Naming Ceremony',text,url:location.href}).catch(()=>{})}
  else window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');
 }
-$('shareBtn').onclick=shareInvitation;$('panelShare').onclick=shareInvitation;
-let messageMode='rsvp';
-function showMessageForm(mode){messageMode=mode;panelHome.hidden=true;panelForm.hidden=false;panelGalleryView.hidden=true;$('guestMessage').value='';$('guestName').value='';$('guestMessage').placeholder=mode==='rsvp'?'Please confirm your attendance...':'Write your blessings for the little one...'}
-$('panelRsvp').onclick=()=>showMessageForm('rsvp');$('panelBless').onclick=()=>showMessageForm('blessing');
-$('backPanel').onclick=()=>{panelForm.hidden=true;panelHome.hidden=false};
-$('sendMessage').onclick=()=>{
- const name=$('guestName').value.trim()||'A guest',msg=$('guestMessage').value.trim();
- const text=messageMode==='rsvp'
- ? 'Naming Ceremony RSVP\nFrom: '+name+'\n'+(msg||'I would like to confirm my attendance.')+'\nSunday, 13 December 2026, 7:30 AM – 9:00 AM.'
- : 'Blessings for the little one\nFrom: '+name+'\n'+(msg||'Sending love and blessings to your family.');
- window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');
-};
-$('panelGallery').onclick=()=>{panelHome.hidden=true;panelGalleryView.hidden=false};
-$('galleryBack').onclick=()=>{panelGalleryView.hidden=true;panelHome.hidden=false};
-$('panelVoice').onclick=()=>{
- if(!('speechSynthesis' in window)){alert('Voice playback is not supported in this browser.');return}
- speechSynthesis.cancel();
- const text=currentLanguage==='ta'
- ? 'அன்புடையீர், எங்கள் குழந்தையின் பெயர் சூட்டும் விழாவிற்கு உங்களையும் உங்கள் குடும்பத்தினரையும் அன்புடன் அழைக்கிறோம். டிசம்பர் பதின்மூன்றாம் தேதி, ஞாயிற்றுக்கிழமை காலை ஏழரை மணி முதல் ஒன்பது மணி வரை, குழந்தையின் தாயின் இல்லத்தில் நடைபெறும். தங்கள் வருகையும் ஆசீர்வாதமும் எங்களுக்கு மகிழ்ச்சி அளிக்கும்.'
- : 'With joyful hearts, Sridhar Prasanth and Sathya invite you and your family to their little one’s naming ceremony. Please join us on Sunday, 13 December 2026, from 7:30 to 9 in the morning, at the baby’s mother’s home. Your presence and blessings will make this day special.';
- const u=new SpeechSynthesisUtterance(text);u.lang=currentLanguage==='ta'?'ta-IN':'en-IN';u.rate=.88;u.pitch=1;speechSynthesis.speak(u);
-};
-/* English / Tamil text toggle for the invitation copy. */
-let currentLanguage='en';
-const translations={
- 'With the blessings of the Almighty':'இறைவனின் அருளுடன்',
- 'A Day of<br>Blessings':'ஆசீர்வாதங்களின்<br>அழகிய நாள்',
- 'A cherished family occasion':'குடும்பத்தின் இனிய நிகழ்வு',
- 'Naming ceremony':'பெயர் சூட்டு விழா',
- 'A Little One’s<br>Special Day':'செல்லக் குழந்தையின்<br>சிறப்பு நாள்',
- 'A new beginning, a beautiful blessing, and a day to remember.':'புதிய தொடக்கம், அழகிய ஆசீர்வாதம், என்றும் நினைவில் நிற்கும் நாள்.',
- 'Welcome, little one':'செல்லக் குழந்தையே, வருக',
- 'Our little blessing':'எங்கள் சிறிய ஆசீர்வாதம்',
- 'Please join us':'அன்புடன் வருக',
- 'Hosted with love by':'அன்புடன் அழைப்பவர்கள்',
- 'With joyful hearts, we invite you and your family to join us for our little one’s naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.':'எங்கள் குழந்தையின் பெயர் சூட்டு விழாவில் நீங்களும் உங்கள் குடும்பத்தினரும் கலந்து கொண்டு ஆசீர்வதிக்க அன்புடன் அழைக்கிறோம். தங்கள் வருகை இந்த இனிய நாளை மேலும் சிறப்பாக்கும்.',
- 'Sunday':'ஞாயிற்றுக்கிழமை',
- 'Time':'நேரம்',
- 'Venue':'இடம்',
- 'At the Baby’s Mother’s Home':'குழந்தையின் தாயின் இல்லம்',
- 'Counting the days until we celebrate':'நம் கொண்டாட்டத்திற்காக காத்திருக்கிறோம்',
- 'Counting down to our special moment':'நம் சிறப்பு தருணத்திற்கான கவுண்ட்டவுன்',
- 'Our celebration is ongoing! ✨':'நமது கொண்டாட்டம் நடைபெறுகிறது! ✨',
- 'Celebration completed — thank you for your blessings! ♥':'விழா நிறைவடைந்தது — உங்கள் ஆசீர்வாதங்களுக்கு நன்றி! ♥',
- 'Days':'நாட்கள்','Hours':'மணி','Minutes':'நிமிடங்கள்','Seconds':'விநாடிகள்',
- 'We would be grateful for your blessings and good wishes as our little one begins a beautiful journey. Thank you for being part of our family’s special moments.':'எங்கள் குழந்தையின் அழகிய பயணத்தின் தொடக்கத்தில் தங்கள் ஆசீர்வாதங்களையும் வாழ்த்துகளையும் வழங்குமாறு அன்புடன் கேட்டுக்கொள்கிறோம். எங்கள் குடும்பத்தின் மகிழ்ச்சியில் பங்கேற்பதற்கு நன்றி.'
-};
-const originalText=new Map();
-function setLanguage(lang){
- currentLanguage=lang;$('languageBtn').textContent=lang==='en'?'தமிழ்':'English';
- scenes.forEach(scene=>scene.querySelectorAll('*').forEach(el=>{
-  if(el.children.length===0){if(!originalText.has(el))originalText.set(el,el.textContent);const en=originalText.get(el);el.textContent=lang==='ta'?(translations[en]||en):en}
- }));
- $('eventTime').textContent=lang==='ta'?'காலை 7:30 – 9:00':'7:30 AM – 9:00 AM';
- const htmlLabels=[
-  ['#s0 .big','A Day of<br>Blessings','ஆசீர்வாதங்களின்<br>அழகிய நாள்'],
-  ['#s0 .kick:last-child','A cherished family occasion','குடும்பத்தின் இனிய நிகழ்வு'],
-  ['#s1 .big','A Little One’s<br>Special Day','செல்லக் குழந்தையின்<br>சிறப்பு நாள்'],
-  ['#s1 .sub','A new beginning, a beautiful blessing, and a day to remember.','புதிய தொடக்கம், அழகிய ஆசீர்வாதம், என்றும் நினைவில் நிற்கும் நாள்.'],
-  ['#s3 .small','With joyful hearts, we invite you and your family to join us for our little one’s naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.','எங்கள் குழந்தையின் பெயர் சூட்டு விழாவில் நீங்களும் உங்கள் குடும்பத்தினரும் கலந்து கொண்டு ஆசீர்வதிக்க அன்புடன் அழைக்கிறோம். தங்கள் வருகை இந்த இனிய நாளை மேலும் சிறப்பாக்கும்.'],
-  ['#s4 .quote','“May this little life be filled with love, wisdom, good health and happiness.”','“இந்தச் சிறிய வாழ்வு அன்பு, ஞானம், நல்ல ஆரோக்கியம் மற்றும் மகிழ்ச்சியால் நிறையட்டும்.”'],
-  ['#s4 .small','We would be grateful for your blessings and good wishes as our little one begins a beautiful journey. Thank you for being part of our family’s special moments.','எங்கள் குழந்தையின் அழகிய பயணத்தின் தொடக்கத்தில் தங்கள் ஆசீர்வாதங்களையும் வாழ்த்துகளையும் வழங்குமாறு அன்புடன் கேட்டுக்கொள்கிறோம். எங்கள் குடும்பத்தின் மகிழ்ச்சியில் பங்கேற்பதற்கு நன்றி.']
- ];
- htmlLabels.forEach(([selector,en,ta])=>{const el=document.querySelector(selector);if(el)el.innerHTML=lang==='ta'?ta:en});
- $('panelTitle').textContent=lang==='ta'?'இனிய பகிர்வுகள்':'A little more to share';
- $('panelIntro').textContent=lang==='ta'?'அழைப்பைப் பகிரவும், வாழ்த்துகளை அனுப்பவும், வருகையை உறுதிப்படுத்தவும்.':'Celebrate this special day with us. Share the invitation, send your wishes, or let us know if you can join.';
-}
-$('languageBtn').onclick=()=>setLanguage(currentLanguage==='en'?'ta':'en');
+$('shareBtn').onclick=shareInvitation;
 
 tick();setInterval(tick,1000);
 </script>
