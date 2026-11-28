@@ -205,6 +205,7 @@ function setLanguage(lang){
  const svgText=document.querySelector('#s2 .scallop-shape tspan');if(svgText)svgText.textContent=ta?translations.s2Blessing:'Our little blessing';
  put('#s2 .welcome-footer','Please join us',translations.s2Footer);
  put('#s3>.kick','Hosted with love by',translations.s3Kicker);
+ put('#s3 .names','Sridhar Prasanth<br>&amp; Sathya','ஸ்ரீதர் பிரசாந்த்<br>&amp; சத்யா');
  put('#s3 .small','With joyful hearts, we invite you and your family to join us for our little one’s naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.',translations.s3Body);
  put('#eventDate .kick','Sunday',translations.sunday);
  put('#eventDate .mid','13 December 2026',translations.date);
@@ -221,6 +222,7 @@ function setLanguage(lang){
  put('#s4>.small','We would be grateful for your blessings and good wishes as our little one begins a beautiful journey. Thank you for being part of our family’s special moments.',translations.closing);
  put('#start .big','You are<br>invited',translations.startTitle);
  put('#start .kick','Tap to begin · sound on ♪',translations.startPrompt);
+ $('langBtn').textContent=ta?'த':'EN';
  $('langBtn').title=ta?translations.languageToEnglish:translations.languageToTamil;
  $('langBtn').setAttribute('aria-label',ta?translations.languageToEnglish:translations.languageToTamil);
  $('shareBtn').title=ta?translations.shareLabel:'Share invitation';
