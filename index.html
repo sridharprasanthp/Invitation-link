@@ -103,12 +103,11 @@ function tick(){
 
 function shareInvitation(){
  const invitationUrl='https://family-celebration-invitation.vercel.app/';
- const shareText='A tiny star has brought a beautiful new chapter into our lives… ✨💛\\n\\nA special moment is waiting to be shared with you. There’s a little surprise behind this invitation — open it to discover more! 🎁🌸';
+ const shareText='A tiny star has brought a beautiful new chapter into our lives… ✨💛 A special moment is waiting to be shared with you. There’s a little surprise behind this invitation — open it to discover more! 🎁🌸 Tap here to uncover the surprise: '+invitationUrl;
  if(navigator.share){
-  navigator.share({title:'A Little Surprise Awaits ✨',text:shareText,url:invitationUrl}).catch(()=>{});
+  navigator.share({title:'A Little Surprise Awaits ✨',text:shareText}).catch(()=>{});
  }else{
-  const whatsappText=shareText+'\\n\\n✨ Open your invitation: '+invitationUrl;
-  window.open('https://wa.me/?text='+encodeURIComponent(whatsappText),'_blank','noopener');
+  window.open('https://wa.me/?text='+encodeURIComponent(shareText),'_blank','noopener');
  }
 }
 $('shareBtn').onclick=shareInvitation;
