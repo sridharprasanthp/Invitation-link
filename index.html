@@ -68,7 +68,7 @@ $('googleCalendar').onclick=()=>{window.open(calendarUrl,'_blank','noopener');ca
 $('appleCalendar').onclick=()=>{
  const ics=[
   'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Family Celebration//Naming Ceremony//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
-  'BEGIN:VEVENT','UID:naming-ceremony-20261213@family-celebration-invitation','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\\.\\d{3}/,''),
+  'BEGIN:VEVENT','UID:naming-ceremony-20261213@family-celebration-invitation','DTSTAMP:'+new Date().toISOString().slice(0,19).replaceAll('-','').replaceAll(':','')+'Z',
   'DTSTART:20261213T020000Z','DTEND:20261213T033000Z',
   'SUMMARY:Naming Ceremony for Sathya Sridhar\'s baby',
   'DESCRIPTION:Join us for a joyful naming ceremony. Hosted by Sridhar Prasanth & Sathya.',
