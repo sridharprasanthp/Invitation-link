@@ -212,6 +212,16 @@ function setLanguage(lang){
   if(el.children.length===0){if(!originalText.has(el))originalText.set(el,el.textContent);const en=originalText.get(el);el.textContent=lang==='ta'?(translations[en]||en):en}
  }));
  $('eventTime').textContent=lang==='ta'?'காலை 7:30 – 9:00':'7:30 AM – 9:00 AM';
+ const htmlLabels=[
+  ['#s0 .big','A Day of<br>Blessings','ஆசீர்வாதங்களின்<br>அழகிய நாள்'],
+  ['#s0 .kick:last-child','A cherished family occasion','குடும்பத்தின் இனிய நிகழ்வு'],
+  ['#s1 .big','A Little One’s<br>Special Day','செல்லக் குழந்தையின்<br>சிறப்பு நாள்'],
+  ['#s1 .sub','A new beginning, a beautiful blessing, and a day to remember.','புதிய தொடக்கம், அழகிய ஆசீர்வாதம், என்றும் நினைவில் நிற்கும் நாள்.'],
+  ['#s3 .small','With joyful hearts, we invite you and your family to join us for our little one’s naming ceremony. Your presence and blessings will make this cherished occasion even more meaningful. We look forward to celebrating this special moment together.','எங்கள் குழந்தையின் பெயர் சூட்டு விழாவில் நீங்களும் உங்கள் குடும்பத்தினரும் கலந்து கொண்டு ஆசீர்வதிக்க அன்புடன் அழைக்கிறோம். தங்கள் வருகை இந்த இனிய நாளை மேலும் சிறப்பாக்கும்.'],
+  ['#s4 .quote','“May this little life be filled with love, wisdom, good health and happiness.”','“இந்தச் சிறிய வாழ்வு அன்பு, ஞானம், நல்ல ஆரோக்கியம் மற்றும் மகிழ்ச்சியால் நிறையட்டும்.”'],
+  ['#s4 .small','We would be grateful for your blessings and good wishes as our little one begins a beautiful journey. Thank you for being part of our family’s special moments.','எங்கள் குழந்தையின் அழகிய பயணத்தின் தொடக்கத்தில் தங்கள் ஆசீர்வாதங்களையும் வாழ்த்துகளையும் வழங்குமாறு அன்புடன் கேட்டுக்கொள்கிறோம். எங்கள் குடும்பத்தின் மகிழ்ச்சியில் பங்கேற்பதற்கு நன்றி.']
+ ];
+ htmlLabels.forEach(([selector,en,ta])=>{const el=document.querySelector(selector);if(el)el.innerHTML=lang==='ta'?ta:en});
  $('panelTitle').textContent=lang==='ta'?'இனிய பகிர்வுகள்':'A little more to share';
  $('panelIntro').textContent=lang==='ta'?'அழைப்பைப் பகிரவும், வாழ்த்துகளை அனுப்பவும், வருகையை உறுதிப்படுத்தவும்.':'Celebrate this special day with us. Share the invitation, send your wishes, or let us know if you can join.';
 }
