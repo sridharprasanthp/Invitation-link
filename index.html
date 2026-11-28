@@ -102,9 +102,14 @@ function tick(){
 
 
 function shareInvitation(){
- const text='You are warmly invited to our little one’s naming ceremony! Sunday, 13 December 2026, 7:30 AM – 9:00 AM. Venue: At the Baby’s Mother’s Home. Hosted by Sridhar Prasanth & Sathya.\\n\\nInvitation: '+location.href;
- if(navigator.share){navigator.share({title:'A Day of Blessings — Naming Ceremony',text,url:location.href}).catch(()=>{})}
- else window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');
+ const invitationUrl='https://family-celebration-invitation.vercel.app/';
+ const shareText='A tiny star has brought a beautiful new chapter into our lives… ✨💛\\n\\nA special moment is waiting to be shared with you. There’s a little surprise behind this invitation — open it to discover more! 🎁🌸';
+ if(navigator.share){
+  navigator.share({title:'A Little Surprise Awaits ✨',text:shareText,url:invitationUrl}).catch(()=>{});
+ }else{
+  const whatsappText=shareText+'\\n\\n✨ Open your invitation: '+invitationUrl;
+  window.open('https://wa.me/?text='+encodeURIComponent(whatsappText),'_blank','noopener');
+ }
 }
 $('shareBtn').onclick=shareInvitation;
 
