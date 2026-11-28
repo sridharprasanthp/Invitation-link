@@ -248,7 +248,7 @@ function tick(){
  const now=Date.now(),start=eventStart.getTime(),end=eventEnd.getTime();
  const date=$('eventDate'),time=$('eventTime'),status=$('eventStatus'),count=$('countdown');
  if(now<start){
-  date.classList.remove('completed');time.classList.remove('completed');status.dataset.state='eventBefore';status.textContent=currentLanguage==='ta'?translations.eventBefore:'Counting down to our special moment';
+  date.classList.remove('completed');time.classList.remove('completed');status.dataset.state='';status.textContent='';
   count.classList.remove('hidden');
   let r=start-now;
   for(const[id,s]of Object.entries({days:864e5,hours:36e5,minutes:6e4,seconds:1e3})){$(id).textContent=String(Math.floor(r/s));r%=s}
